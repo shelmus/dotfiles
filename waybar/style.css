@@ -8,8 +8,8 @@
 }
 
 window#waybar {
-    background-color: #1a1b26;
-    color: #a9b1d6;
+    background-color: #282a36;
+    color: #f8f8f2;
     transition-property: background-color;
     transition-duration: 1s;
 }
@@ -39,8 +39,8 @@ window#waybar.chromium {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #1a1b26;
+    color: #f8f8f2;
+    border: 2px solid #282a36;
     border-radius: 5px;
 }
 
@@ -52,7 +52,7 @@ window#waybar.chromium {
 }
 
 #workspaces button.focused {
-    background-color: #1a1b26;
+    background-color: #282a36;
     border: 2px solid #bb9af7;
 }
 
@@ -62,7 +62,7 @@ window#waybar.chromium {
 
 #mode {
     background-color: #64727D;
-    border: 3px solid #ffffff;
+    border: 3px solid #f8f8f2;
 }
 
 #custom-username,
@@ -104,11 +104,11 @@ window#waybar.chromium {
 }
 
 #battery.full {
-    color: #9ece6a;
+    color: #50fa7b;
 }
 
 #battery.charging {
-    color: #ff9e64;
+    color: #ffb86c;
 }
 
 @keyframes blink {
@@ -119,7 +119,7 @@ window#waybar.chromium {
 }
 
 #battery.critical:not(.charging) {
-    color: #f7768e;
+    color: #ff5555;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -144,7 +144,7 @@ label:focus {
 }
 
 #network {
-    color: #9ece6a;
+    color: #50fa7b;
     /* border: 2px solid #ffb86c; */
 }
 

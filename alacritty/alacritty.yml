@@ -48,58 +48,58 @@ history: 0
 background_opacity: .85
 
 # Colors (Dracula)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '#282a36'
-#     foreground: '#f8f8f2'
-
-#   # Normal colors
-#   normal:
-#     black:   '#000000'
-#     red:     '#ff5555'
-#     green:   '#50fa7b'
-#     yellow:  '#f1fa8c'
-#     blue:    '#caa9fa'
-#     magenta: '#ff79c6'
-#     cyan:    '#8be9fd'
-#     white:   '#bfbfbf'
-
-#   # Bright colors
-#   bright:
-#     black:   '#575b70'
-#     red:     '#ff6e67'
-#     green:   '#5af78e'
-#     yellow:  '#f4f99d'
-#     blue:    '#caa9fa'
-#     magenta: '#ff92d0'
-#     cyan:    '#9aedfe'
-#     white:   '#e6e6e6'
-
-# tokyo night theme
-colors: 
+colors:
+  # Default colors
   primary:
-    background: '0x1a1b26'
-    foreground: '0xa9b1d6'
+    background: '#282a36'
+    foreground: '#f8f8f2'
 
   # Normal colors
   normal:
-    black:   '0x32344a'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xad8ee6'
-    cyan:    '0x449dab'
-    white:   '0x787c99'
+    black:   '#000000'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#caa9fa'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
 
   # Bright colors
   bright:
-    black:   '0x444b6a'
-    red:     '0xff7a93'
-    green:   '0xb9f27c'
-    yellow:  '0xff9e64'
-    blue:    '0x7da6ff'
-    magenta: '0xbb9af7'
-    cyan:    '0x0db9d7'
-    white:   '0xacb0d0'
+    black:   '#575b70'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'
+
+# tokyo night theme
+# colors: 
+#   primary:
+#     background: '0x1a1b26'
+#     foreground: '0xa9b1d6'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x32344a'
+#     red:     '0xf7768e'
+#     green:   '0x9ece6a'
+#     yellow:  '0xe0af68'
+#     blue:    '0x7aa2f7'
+#     magenta: '0xad8ee6'
+#     cyan:    '0x449dab'
+#     white:   '0x787c99'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x444b6a'
+#     red:     '0xff7a93'
+#     green:   '0xb9f27c'
+#     yellow:  '0xff9e64'
+#     blue:    '0x7da6ff'
+#     magenta: '0xbb9af7'
+#     cyan:    '0x0db9d7'
+#     white:   '0xacb0d0'
