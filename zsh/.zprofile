@@ -18,6 +18,6 @@ if [ -z "${DESKTOP:-}" ] && [ "$(tty)" = "/dev/tty1" ]; then
       systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE
     fi
 
-    exec sway
+    exec sway --my-next-gpu-wont-be-nvidia
   fi
 fi

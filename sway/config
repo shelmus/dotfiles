@@ -10,7 +10,7 @@ font pango:Fira Sans 9
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod1
+set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -33,6 +33,12 @@ output * bg ~/.backgrounds/galaxy.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+
+output eDP-1 resolution 1920x1080 position 0,0
+output HDMI-A-1 resolution 1600x900 position 1920,0
+
+#workspace assignments
+workspace 10 output HDMI-A-1
 
 ### Idle configuration
 #
@@ -227,6 +233,7 @@ smart_borders on
 
 # Floating windows
 for_window [app_id="gnome-calculator"] floating enable
+for_window [app_id="yad"] floating enable
 
 # gtk workaround
 set $gnome-schema org.gnome.desktop.interface
