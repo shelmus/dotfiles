@@ -39,19 +39,21 @@ output HDMI-A-1 resolution 1600x900 position 1920,0
 
 #workspace assignments
 workspace 10 output HDMI-A-1
+workspace 9 output HDMI-A-1
 
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle -w \
+         timeout 500 'bash ~/.scripts/lock.sh' \
+         timeout 700 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' 
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
+bindsym $mod+l exec bash ~/.scripts/lock.sh
 
 ### Input configuration
 #
@@ -95,7 +97,7 @@ input "1739:32183:SYNA7DB5:01_06CB:7DB7_Touchpad" {
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    #bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
