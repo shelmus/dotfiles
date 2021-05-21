@@ -10,7 +10,7 @@ font pango:Fira Sans 9
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -21,7 +21,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run | xargs swaymsg exec --
+set $menu wofi --show drun | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -34,34 +34,40 @@ output * bg ~/.backgrounds/galaxy.png fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output eDP-1 resolution 1920x1080 position 0,0
-output HDMI-A-1 resolution 1600x900 position 1920,0
+### Docked configs
 
-#workspace assignments
-workspace 10 output HDMI-A-1
+output eDP-1 dpms off
+output HDMI-A-1 resolution 5120x1440 position 1920,0
+
+### Workspace display assignments
+workspace 7 output HDMI-A-1
+workspace 8 output HDMI-A-1
 workspace 9 output HDMI-A-1
+workspace 10 output HDMI-A-1
 
 ### Idle configuration
-#
-# Example configuration:
-#
+
+set $lock swaylock --clock --indicator --screenshots --effect-scale 0.5 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
 exec swayidle -w \
-         timeout 500 'bash ~/.scripts/lock.sh' \
-         timeout 700 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' 
+    timeout 500 $lock \
+    timeout 470 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep $lock
 
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+### Manual locking
 
-bindsym $mod+l exec bash ~/.scripts/lock.sh
+set $lockman exec bash ~/.scripts/lockman.sh
+bindsym $mod+l exec $lockman
+
+#bindsym $mod+l exec bash ~/.scripts/lock.sh
 
 ### Input configuration
-#
+
 input "1739:32183:SYNA7DB5:01_06CB:7DB7_Touchpad" {
     tap enabled
     natural_scroll enabled
 }
-#
+
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
