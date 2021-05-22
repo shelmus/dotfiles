@@ -8,7 +8,7 @@ export ZSH="/home/sean/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,7 +111,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 #
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # aliases
 pyenv="python -m venv venv"
